@@ -15,6 +15,7 @@ function ppm_pinterest_init() {
 	
 	if (!is_admin()) {
 		wp_enqueue_style('ppm_pinterest', PPM_PINTEREST_URI . 'css/ppm-pinterest.css', false, PPM_PINTEREST_VERSION, 'screen');
+		wp_enqueue_script('pinterest_plus_html5', PRETTYPHOTO_URI . 'js/pinterest-plus-html5.min.js', false, false, true);
 		add_action('wp_footer', 'ppm_pinterest_footer_script', 101);
 	}	
 }
