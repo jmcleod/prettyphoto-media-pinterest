@@ -41,4 +41,3 @@ function ppm_pinterest_footer_script() {
 }
 
 ?>
-
