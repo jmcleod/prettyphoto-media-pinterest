@@ -2,7 +2,7 @@
 /*
  * Plugin Name: prettyPhoto Media Pinterest
  * Depends: prettyPhoto Media
- * Plugin URI: http://jamesmcleodphoto.com
+ * Plugin URI: http://github.com/jmcleod/prettyphoto-media-pinterest
  * Description: Adds a Pinterest "Pin It" Button to prettyPhoto.
  * Version: 0.1
  * Author: James McLeod
@@ -13,13 +13,10 @@ define('PPM_PINTEREST_VERSION', '0.1' );
 add_action('init', 'ppm_pinterest_init');
 
 function ppm_pinterest_init() {
-
-	
 	if (!is_admin()) {
 		wp_enqueue_style('ppm_pinterest', PPM_PINTEREST_URI . 'css/ppm-pinterest.css', false, PPM_PINTEREST_VERSION, 'screen');
-	}
-	
-	add_action('wp_footer', 'ppm_pinterest_footer_script', 101);
+		add_action('wp_footer', 'ppm_pinterest_footer_script', 101);
+	}	
 }
 
 function ppm_pinterest_footer_script() {
